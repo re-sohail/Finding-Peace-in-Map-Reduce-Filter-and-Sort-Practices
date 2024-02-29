@@ -13,5 +13,5 @@ I try to Solve Some Quetion Related to Filter, Map, Reduce, and Sort Methods of 
 9: Find orders where the unit price was less than $200.<br>
 10: Identify sales where the total sale amount was between $5000 and $8000.<br>
 11: Find all "Laptop" sales made in the "West" region in 2020.<br>
-12: Get sales made by "Steven" where the item was a "Smartwatch" and the sale amount was over $10,000.<br>
+12: Get sales made by "Timothy" where the item was a "Smartwatch" and the sale amount was over $10,000.<br>
 13: List all sales in the "Central" region with a unit price below $100 that occurred before 2021.<br>
