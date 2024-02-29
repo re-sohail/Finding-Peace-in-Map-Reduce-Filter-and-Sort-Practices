@@ -37,6 +37,7 @@ let salesData = [
     { OrderDate: '10/4/20', Region: 'West', Manager: 'Steven', SalesMan: 'Grace', Item: 'Laptop', Units: 28, Unit_price: 800.00, Sale_amt: 22400.00 },
     { OrderDate: '1/21/21', Region: 'East', Manager: 'Diana', SalesMan: 'William', Item: 'Smartphone', Units: 36, Unit_price: 200.00, Sale_amt: 7200.00 },
     { OrderDate: '4/8/21', Region: 'Central', Manager: 'Jonathan', SalesMan: 'Ella', Item: 'Headphones', Units: 20, Unit_price: 45.00, Sale_amt: 900.00 },
+    { OrderDate: '4/8/20', Region: 'Central', Manager: 'Jonathan', SalesMan: 'Ella', Item: 'Headphones', Units: 20, Unit_price: 45.00, Sale_amt: 900.00 },
     
   ];
 
@@ -160,7 +161,37 @@ let salesData = [
     })
     // console.table(salemonth2)
 
+    // Q no 6: List the orders made in the first quarter (January - March) of any year.
+    let multiMonthsSale = salesData.filter((months3)=> new Date(months3.OrderDate).getMonth() >= 0 && new Date(months3.OrderDate).getMonth() <= 2)
+    // console.table(multiMonthsSale)
 
+    // Q no 7: Get sales that happened on or after October 1st, 2020.
+    let October2020 = salesData.filter((Octobermonth) => new Date(Octobermonth.OrderDate).getDay() >= 1 && new Date(Octobermonth.OrderDate).getMonth() == 9)
+    // console.table(October2020)
+
+    // Q no 8: Show sales where the number of units sold was between 30 and 50 (inclusive).
+    let unitSale = salesData.filter((unit) => unit.Units > 30 && unit.Units < 50)
+    // console.table(unitSale)
+
+    // Q no 9: Find orders where the unit price was less than $200.
+    let unitPrice = salesData.filter((unitP) => unitP.Unit_price < 200)
+    // console.table(unitPrice)
+
+    // Q no 10: Identify sales where the total sale amount was between $5000 and $8000.
+    let totalSale = salesData.filter((total) => total.Sale_amt > 5000 && total.Sale_amt < 8000)
+    // console.table(totalSale)
+
+    // Q no 11: Find all "Laptop" sales made in the "West" region in 2020.
+    let laptopSale = salesData.filter((laptop) => laptop.Item === "Laptop" && laptop.Region === "West" && new Date(laptop.OrderDate).getFullYear() === 2020)
+    // console.table(laptopSale)
+
+    // Q no 12: Get sales made by "Timothy" where the item was a "Smartwatch" and the sale amount was over $10,000.
+    let smartwatch = salesData.filter((watch) => watch.Manager === "Timothy" && watch.Item === "Smartwatch" && watch.Sale_amt > 10000)
+    // console.table(smartwatch)
+
+    // Q no 13: List all sales in the "Central" region with a unit price below $100 that occurred before 2021
+    let centralSale = salesData.filter((central) => central.Region === 'Central' && central.Unit_price < 100 && new Date(central.OrderDate).getFullYear() <2021)
+    console.table(centralSale)
 
 
 
