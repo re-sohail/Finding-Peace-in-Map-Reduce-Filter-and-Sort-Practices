@@ -16,6 +16,7 @@ I try to Solve Some Quetion Related to Filter, Map, Reduce, and Sort Methods of 
 11: Find all "Laptop" sales made in the "West" region in 2020.<br>
 12: Get sales made by "Timothy" where the item was a "Smartwatch" and the sale amount was over $10,000.<br>
 13: List all sales in the "Central" region with a unit price below $100 that occurred before 2021.<br>
+
 **map() Questions**<br>
 1: Calculate an array where each element represents the total Sale_amt for each order in salesData.<br>
 2: Create a new array containing only the distinct regions present in salesData.<br>
