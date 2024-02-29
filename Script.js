@@ -90,7 +90,28 @@ let salesData = [
     // console.table(itemData3)
 
 
-    // Q no 3:
+    // Q no 3: List all sales made by the salesperson "Emily".
+    // way 1
+    let salesperson1 = salesData.filter((person1)=> {
+        if(person1.SalesMan === "Emily"){
+            return person1
+        }
+    })
+    // console.table(salesperson1)
+
+    //way 2     => Changing salesperson
+
+    let salesperson2 = salesData.filter(function(person2){
+        if(person2.SalesMan === "Sophia"){
+            return person2
+        }
+    })
+    // console.table(salesperson2)
+
+    //way 3  
+    let salesperson3 = salesData.filter((person3) => person3.SalesMan === "Emily")
+    // console.table(salesperson3)
+
 
 
 
