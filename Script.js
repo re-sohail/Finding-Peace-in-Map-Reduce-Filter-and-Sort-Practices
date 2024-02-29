@@ -116,6 +116,8 @@ let salesData = [
     let saleAmount = salesData.filter((ammount) => ammount.Sale_amt > 15000)
     // console.table(saleAmount)
 
+
+
     // Q no 5: Find all sales that occurred in the year 2019
 
     // way 1
@@ -142,6 +144,21 @@ let salesData = [
     let salesYear3 = salesData.filter(saleyear)
     // console.table(salesYear3)
 
+    // Q no 5: Find all sales that occurred in the 5th months of  2020
+    // way 1
+    let saleMonth1 = salesData.filter((month) => new Date(month.OrderDate).getFullYear() === 2019 || new Date(month.OrderDate).getMonth() === 5)
+    // console.table(saleMonth1)
+
+    // way 2
+    let salemonth2 = salesData.filter(function(month2){
+        let date = new Date(month2.OrderDate);
+        let myMonth = date.getMonth();
+        let myYear = date.getFullYear();
+        if(myMonth === 7 && myYear === 2020){
+            return month2
+        }
+    })
+    // console.table(salemonth2)
 
 
 
