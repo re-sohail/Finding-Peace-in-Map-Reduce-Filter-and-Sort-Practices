@@ -2,7 +2,7 @@ I try to Solve Some Quetion Related to Filter, Map, Reduce, and Sort Methods of 
 
 **Filter Questions**
 
-1: Find all sales from the "East" region.
+1: Find all sales from the "East" region.<br>
 2: Get all orders where the item sold was a "Tablet".
 3: List all sales made by the salesperson "Emily".
 4: Retrieve orders where the total sale amount (Sale_amt) exceeded $15,000.
