@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Table Example</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Data Table Example</h2>
+
+<table id="dataTable">
+  <thead>
+    <tr>
+      <th>Inventor</th>
+      <th>Invention</th>
+      <th>Year</th>
+      <th>Country</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Table content will be dynamically generated here -->
+  </tbody>
+</table>
+
+<!-- <script>
+  // Sample data
+  const inventorsData = [
+    { Inventor: 'Alice Johnson', Invention: 'Time-Traveling Device', Year: 2050, Country: 'United States' },
+    { Inventor: 'Hiroshi Tanaka', Invention: 'Floating Energy Generator', Year: 2045, Country: 'Japan' },
+    // ... (more data)
+
+    // Add your larger dataset here or fetch data from an API
+  ];
+
+  // Function to generate table rows dynamically
+  function generateTableRows(data) {
+    const tbody = document.querySelector('#dataTable tbody');
+
+    data.map(item => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${item.Inventor}</td>
+        <td>${item.Invention}</td>
+        <td>${item.Year}</td>
+        <td>${item.Country}</td>
+      `;
+      tbody.appendChild(row);
+    });
+  }
+
+  // Call the function with your data
+  generateTableRows(inventorsData);
+</script> -->
+
+<script src="Script.js"></script>
+
+</body>
+</html>
