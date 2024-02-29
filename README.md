@@ -2,7 +2,7 @@ I try to Solve Some Quetion Related to Filter, Map, Reduce, and Sort Methods of 
 
 **Practice 1**
 
-**Filter Questions**<br>
+**filter() Questions**<br>
 1: Find all sales from the "East" region.<br>
 2: Get all orders where the item sold was a "Tablet".<br>
 3: List all sales made by the salesperson "Emily".<br>
@@ -16,7 +16,7 @@ I try to Solve Some Quetion Related to Filter, Map, Reduce, and Sort Methods of 
 11: Find all "Laptop" sales made in the "West" region in 2020.<br>
 12: Get sales made by "Timothy" where the item was a "Smartwatch" and the sale amount was over $10,000.<br>
 13: List all sales in the "Central" region with a unit price below $100 that occurred before 2021.<br>
-**Filter Questions**<br>
+**map() Questions**<br>
 1: Calculate an array where each element represents the total Sale_amt for each order in salesData.<br>
 2: Create a new array containing only the distinct regions present in salesData.<br>
 3: Generate an array where each item's name is capitalized (e.g., 'Laptop' becomes 'LAPTOP').<br>
