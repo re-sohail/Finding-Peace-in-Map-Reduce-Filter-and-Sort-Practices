@@ -1,0 +1,43 @@
+
+  // Sceond Practice on Inventors
+
+  const inventorsData = [
+    { Inventor: 'Alice Johnson', Invention: 'Time-Traveling Device', Year: 2050, Country: 'United States' },
+    { Inventor: 'Hiroshi Tanaka', Invention: 'Floating Energy Generator', Year: 2045, Country: 'Japan' },
+    { Inventor: 'Elena Rodriguez', Invention: 'Anti-Gravity Shoes', Year: 2038, Country: 'Spain' },
+    { Inventor: 'Mohammed Al-Farsi', Invention: 'Bio-Enhancement Nanobots', Year: 2042, Country: 'Saudi Arabia' },
+    { Inventor: 'Sophie Dubois', Invention: 'Smart Plant Growth System', Year: 2048, Country: 'France' },
+    { Inventor: 'Raj Kapoor', Invention: 'Solar-Powered Air Purifier', Year: 2035, Country: 'India' },
+    { Inventor: 'Isabella Chang', Invention: 'Mind-Reading Headset', Year: 2046, Country: 'China' },
+    { Inventor: 'Antonio Morales', Invention: 'Ocean Cleanup Drones', Year: 2039, Country: 'Mexico' },
+    { Inventor: 'Oliver Smith', Invention: 'Holographic Communication Device', Year: 2044, Country: 'United Kingdom' },
+    { Inventor: 'Emma Williams', Invention: 'Invisible Cloak', Year: 2047, Country: 'Canada' },
+    { Inventor: 'Liam Chen', Invention: 'Mind-Controlled Robotics', Year: 2043, Country: 'Australia' },
+    { Inventor: 'Ava Kim', Invention: 'Biodegradable Plastics', Year: 2037, Country: 'South Korea' },
+    { Inventor: 'Noah Gupta', Invention: 'AI-Powered Personal Assistant', Year: 2041, Country: 'Germany' },
+    { Inventor: 'Olivia Rodriguez', Invention: 'Augmented Reality Glasses', Year: 2049, Country: 'Brazil' },
+    { Inventor: 'Mia Patel', Invention: 'Self-Healing Materials', Year: 2036, Country: 'Netherlands' },
+    { Inventor: 'Lucas Chang', Invention: 'Flying Car', Year: 2040, Country: 'Singapore' },
+    { Inventor: 'Sophia Kim', Invention: 'Teleportation Device', Year: 2042, Country: 'New Zealand' },
+    { Inventor: 'Jackson Nguyen', Invention: 'Robotics for Elderly Care', Year: 2039, Country: 'Sweden' },
+    { Inventor: 'Liam Johnson', Invention: 'Bio-Printed Organs', Year: 2042, Country: 'United States' },
+    { Inventor: 'Olivia Tanaka', Invention: 'Self-Driving Hoverboard', Year: 2048, Country: 'Japan' },
+    { Inventor: 'Noah Rodriguez', Invention: 'Personalized Medicine Delivery Drones', Year: 2040, Country: 'Spain' },
+    { Inventor: 'Emma Al-Farsi', Invention: 'AI-Powered Sustainable Farming System', Year: 2045, Country: 'Saudi Arabia' },
+    { Inventor: 'Aiden Dubois', Invention: 'Smart Clothing with Health Monitoring', Year: 2037, Country: 'France' },
+    { Inventor: 'Grace Kapoor', Invention: 'Clean Energy Harvesting Pavements', Year: 2043, Country: 'India' },
+    { Inventor: 'Henry Chang', Invention: 'Neural Implant for Memory Enhancement', Year: 2039, Country: 'China' },
+    { Inventor: 'Chloe Morales', Invention: 'Underwater Exploration Bots', Year: 2046, Country: 'Mexico' },
+    { Inventor: 'William Smith', Invention: 'Quantum Computing Processor', Year: 2041, Country: 'United Kingdom' },
+    { Inventor: 'Elijah Patel', Invention: 'Smart Home Ecosystem', Year: 2036, Country: 'Canada' },
+    { Inventor: 'Amelia Kim', Invention: 'Solar-Powered Desalination System', Year: 2044, Country: 'Australia' },
+    { Inventor: 'Mason Nguyen', Invention: 'AI-Enhanced Virtual Reality', Year: 2047, Country: 'South Korea' },
+    { Inventor: 'Sophia Wang', Invention: 'Bionic Limbs with Touch Sensation', Year: 2038, Country: 'Germany' },
+    { Inventor: 'Logan Garcia', Invention: 'Space Debris Cleanup Satellites', Year: 2049, Country: 'Brazil' },
+    { Inventor: 'Evelyn Kim', Invention: 'Genetic Modification for Disease Resistance', Year: 2041, Country: 'Netherlands' },
+    { Inventor: 'Jackson Lee', Invention: 'Mind-Uploaded Digital Immortality', Year: 2045, Country: 'Singapore' },
+    { Inventor: 'Ava Hernandez', Invention: '3D-Printed Sustainable Homes', Year: 2040, Country: 'New Zealand' },
+    { Inventor: 'Ethan Carter', Invention: 'Human-AI Collaboration for Creativity', Year: 2042, Country: 'Sweden' },
+  ];
+  
+  

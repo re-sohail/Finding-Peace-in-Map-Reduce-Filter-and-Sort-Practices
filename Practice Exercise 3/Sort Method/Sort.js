@@ -1,0 +1,42 @@
+
+  // Third Practice on Company
+
+  const companyData = [
+    { CompanyName: 'Tech Innovators Inc.', Industry: 'Technology', FoundingYear: 2000, Headquarters: { City: 'San Francisco', Country: 'USA' } },
+    { CompanyName: 'Eco Solutions Co.', Industry: 'Environmental', FoundingYear: 2005, Headquarters: { City: 'Berlin', Country: 'Germany' } },
+    { CompanyName: 'Global Robotics Corporation', Industry: 'Robotics', FoundingYear: 2010, Headquarters: { City: 'Tokyo', Country: 'Japan' } },
+    { CompanyName: 'HealthTech Solutions Ltd.', Industry: 'Healthcare', FoundingYear: 2008, Headquarters: { City: 'Sydney', Country: 'Australia' } },
+    { CompanyName: 'Renewable Energy Innovations', Industry: 'Renewable Energy', FoundingYear: 2015, Headquarters: { City: 'Paris', Country: 'France' } },
+    { CompanyName: 'Smart Devices Enterprises', Industry: 'Electronics', FoundingYear: 2003, Headquarters: { City: 'Bangalore', Country: 'India' } },
+    { CompanyName: 'Biotech Breakthroughs LLC', Industry: 'Biotechnology', FoundingYear: 2012, Headquarters: { City: 'Toronto', Country: 'Canada' } },
+    { CompanyName: 'Data Analytics Systems, LLC', Industry: 'Data Analytics', FoundingYear: 2011, Headquarters: { City: 'Seoul', Country: 'South Korea' } },
+    { CompanyName: 'GreenTech Solutions', Industry: 'Green Technology', FoundingYear: 2018, Headquarters: { City: 'Stockholm', Country: 'Sweden' } },
+    { CompanyName: 'InnoTech Solutions', Industry: 'Technology', FoundingYear: 2002, Headquarters: { City: 'New York', Country: 'USA' } },
+    { CompanyName: 'GreenEnergy Innovations', Industry: 'Renewable Energy', FoundingYear: 2013, Headquarters: { City: 'Vancouver', Country: 'Canada' } },
+    { CompanyName: 'BioTech Systems Ltd.', Industry: 'Biotechnology', FoundingYear: 2007, Headquarters: { City: 'Berlin', Country: 'Germany' } },
+    { CompanyName: 'Future Dynamics Corp.', Industry: 'Robotics', FoundingYear: 2016, Headquarters: { City: 'Shanghai', Country: 'China' } },
+    { CompanyName: 'HealthSolutions International', Industry: 'Healthcare', FoundingYear: 2009, Headquarters: { City: 'Sydney', Country: 'Australia' } },
+    { CompanyName: 'DataVision Innovations', Industry: 'Data Analytics', FoundingYear: 2014, Headquarters: { City: 'Toronto', Country: 'Canada' } },
+    { CompanyName: 'GreenBuild Tech', Industry: 'Green Technology', FoundingYear: 2010, Headquarters: { City: 'Stockholm', Country: 'Sweden' } },
+    { CompanyName: 'ElectroInnovate', Industry: 'Electronics', FoundingYear: 2006, Headquarters: { City: 'Tokyo', Country: 'Japan' } },
+    { CompanyName: 'SmartLiving Solutions', Industry: 'Smart Home', FoundingYear: 2015, Headquarters: { City: 'Los Angeles', Country: 'USA' } },
+    { CompanyName: 'SmartTech Innovations', Industry: 'Technology', FoundingYear: 2001, Headquarters: { City: 'San Jose', Country: 'USA' } },
+    { CompanyName: 'EnviroSolutions Global', Industry: 'Environmental', FoundingYear: 2011, Headquarters: { City: 'London', Country: 'United Kingdom' } },
+    { CompanyName: 'RoboTech Dynamics', Industry: 'Robotics', FoundingYear: 2008, Headquarters: { City: 'Seoul', Country: 'South Korea' } },
+    { CompanyName: 'MedTech Solutions Inc.', Industry: 'Healthcare', FoundingYear: 2013, Headquarters: { City: 'Melbourne', Country: 'Australia' } },
+    { CompanyName: 'SolarPower Innovations', Industry: 'Renewable Energy', FoundingYear: 2016, Headquarters: { City: 'Rio de Janeiro', Country: 'Brazil' } },
+    { CompanyName: 'DataDriven Insights', Industry: 'Data Analytics', FoundingYear: 2010, Headquarters: { City: 'Mumbai', Country: 'India' } },
+    { CompanyName: 'EcoBuild Technologies', Industry: 'Green Technology', FoundingYear: 2012, Headquarters: { City: 'Oslo', Country: 'Norway' } },
+    { CompanyName: 'ElectroGadgets Ltd.', Industry: 'Electronics', FoundingYear: 2007, Headquarters: { City: 'Paris', Country: 'France' } },
+    { CompanyName: 'HomeSmart Innovate', Industry: 'Smart Home', FoundingYear: 2015, Headquarters: { City: 'Berlin', Country: 'Germany' } },
+    { CompanyName: 'InnovateTech Solutions', Industry: 'Technology', FoundingYear: 2005, Headquarters: { City: 'Boston', Country: 'USA' } },
+    { CompanyName: 'EcoFriendly Innovations', Industry: 'Environmental', FoundingYear: 2014, Headquarters: { City: 'Sydney', Country: 'Australia' } },
+    { CompanyName: 'RoboInnovate Dynamics', Industry: 'Robotics', FoundingYear: 2009, Headquarters: { City: 'Beijing', Country: 'China' } },
+    { CompanyName: 'MediCare Solutions Inc.', Industry: 'Healthcare', FoundingYear: 2012, Headquarters: { City: 'Tokyo', Country: 'Japan' } },
+    { CompanyName: 'SolarEco Innovations', Industry: 'Renewable Energy', FoundingYear: 2018, Headquarters: { City: 'Berlin', Country: 'Germany' } },
+    { CompanyName: 'DataInsights Hub', Industry: 'Data Analytics', FoundingYear: 2011, Headquarters: { City: 'San Francisco', Country: 'USA' } },
+    { CompanyName: 'EcoSustainable Tech', Industry: 'Green Technology', FoundingYear: 2013, Headquarters: { City: 'London', Country: 'United Kingdom' } },
+    { CompanyName: 'ElectroTech Ltd.', Industry: 'Electronics', FoundingYear: 2006, Headquarters: { City: 'Seoul', Country: 'South Korea' } },
+    { CompanyName: 'SmartLiving Solutions', Industry: 'Smart Home', FoundingYear: 2016, Headquarters: { City: 'Mumbai', Country: 'India' } }
+  ];
+  

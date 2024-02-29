@@ -42,7 +42,74 @@ let salesData = [
   ];
 
 
+  // Q no 1: Calculate an array where each element represents the total Sale_amt for each order in salesData.
+  let saleAmount = salesData.map(salesAmout => salesAmout.Sale_amt)
+  // console.table(saleAmount)
+  
 
+  // Q no 2: Create a new array containing only the distinct regions present in salesData.
+  let allRegion = salesData.map((regions) => regions.Region)
+  let distinctRegion = [... new Set(allRegion)]
+  // console.log(distinctRegion)
+
+  // example of Set(). it is Data Structure Term that give the Unique Value.
+  let arr = [2,3,4,5,2,2,4,5,3,5,5,3,6,7,8,9]
+  let uni = [... new Set(arr)]
+  // console.log(uni)
+
+  // Q no 3: Generate an array where each item's name is capitalized (e.g., 'Laptop' becomes 'LAPTOP').
+  let capitalizedLetter = salesData.map((letters) => letters.Item.toUpperCase()) 
+  // console.log(capitalizedLetter);
+
+  // Q no 3: Generate a new array containing the order dates of all 'Tablet' sales in the 'East' region.
+
+  let allDate = salesData
+  .filter((regions) => regions.Region === "East")
+  .map((dates) => dates.OrderDate)
+  // console.log(allDate);
+
+  // Q no 4: Create an array containing the Sale_amt of all orders where the Unit_price was above 300
+  let orderSale = salesData
+  .filter((price) => price.Unit_price > 300)
+  .map((amount) => amount.Sale_amt)
+  // console.log(orderSale);
+
+  // Q no 5: Create an array with the names of Salespeople who have sold 'Smartwatch' items
+  let salepeople = salesData
+  .filter((items) => items.Item === "Smartwatch")
+  .map((people) => people.SalesMan)
+  // console.log(salepeople);
+
+  // Q no 6: Create a new array where each element is the Sale_amt multiplied by 1.1 (representing a 10% increase).
+  let elements = salesData.map((amount) => amount.Sale_amt * 1.1)
+  // console.log(elements);
+
+  // without in fraactions
+  let saleAmountData =salesData.map((data) => Math.floor(data.Sale_amt * 1.1))
+  // console.log(saleAmountData);
+
+  // Q no 7: Calculate an array containing the profit for each sale, assuming a 30% cost on each item. (Profit = Sale_amt - (Unit_price * Units * 0.3))
+  let salesProfit = salesData.map((amounts) => amounts.Sale_amt - (amounts.Unit_price * amounts.Units * 3))
+  // console.log(salesProfit)
+
+  // Q no 8: Explain the difference between using .map() and .forEach() to loop through an array like salesData. Choose a scenario where one might be better than the other.
+  // first Try forEach()   => .forEach() doesn't return anything (it returns undefined).
+  salesData.forEach(data =>{
+    // console.log(data.Manager);
+  })
+
+  // for map     => .map() is designed to transform arrays. The length of the resulting array is the same as the original array.
+  let managerData = salesData.map((data) => data.Manager)
+  // console.log(managerData);
+
+
+  // Q no 9: What does it mean that .map() is a non-mutating method? How does this differ from methods like .sort()?
+  // sort() directly change the contents of the original array white map() do not change the content of origional content of Array.
+  let arr2 = [1,2,3,2,,4,5,8,5,4,6,7,9]
+  let sortedArray = arr2.sort()
+  // console.log(sortedArray);
+  let maping = arr2.map((number) => number * 2)
+  // console.log(maping)
 
   // Sceond Practice on Inventors
 
