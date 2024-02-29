@@ -112,12 +112,35 @@ let salesData = [
     let salesperson3 = salesData.filter((person3) => person3.SalesMan === "Emily")
     // console.table(salesperson3)
 
+    // Q no 4: Retrieve orders where the total sale amount (Sale_amt) exceeded $15,000.
+    let saleAmount = salesData.filter((ammount) => ammount.Sale_amt > 15000)
+    // console.table(saleAmount)
 
+    // Q no 5: Find all sales that occurred in the year 2019
 
+    // way 1
+    let salesYear1 = salesData.filter((year) => {
+        let date = new Date(year.OrderDate);
+        if(date.getFullYear() === 2019){
+            return year
+        }
+    })
+    // console.table(salesYear1)
 
-
-
-
+    // way 2
+    let salesYear2 = salesData.filter((year2) => new Date(year2.OrderDate).getFullYear() === 2019 )
+    // console.table(salesYear2)
+    
+    //way 3
+    function saleyear(year3){
+        let date = new Date(year3.OrderDate);
+        let myYear = date.getFullYear()
+        if(myYear === 2019){
+            return year3
+        }
+    }
+    let salesYear3 = salesData.filter(saleyear)
+    // console.table(salesYear3)
 
 
 
