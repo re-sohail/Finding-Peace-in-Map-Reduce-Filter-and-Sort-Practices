@@ -41,90 +41,50 @@ let salesData = [
     
   ];
 
+  // Q no 1: Calculate the total sales amount across all orders in salesData.
+  let totalSalesAmount = salesData.reduce((total, next) => total + next.Sale_amt, 0)
+  // console.log(totalSalesAmount);
 
+  // Q no 2: Find the average sale amount in the dataset.
+  let averageSales = salesData.reduce((first, second)=> Math.floor((first + second.Sale_amt)/salesData.length), 0)
+  // console.log(averageSales);
 
+  // Q no 3: Determine the highest and lowest Sale_amt values in salesData. 
+  let lowHighValue = salesData.map((valu) => valu.Sale_amt);
+  let low = Math.min(...lowHighValue)
+  let high = Math.max(...lowHighValue)
+  // console.log(low , high);  
+  //  if I will use Reduce then I will become a Difficult So I use map()
 
-  // Sceond Practice on Inventors
+  // Q no 4: Calculate the total number of sales for each distinct region.
+  let totalSale = salesData.reduce((total, next) => {
+    total[next.Region] = (total[next.Region] || 0) + 1
+    return total
+  },{})
+// console.log(totalSale);
 
-  const inventorsData = [
-    { Inventor: 'Alice Johnson', Invention: 'Time-Traveling Device', Year: 2050, Country: 'United States' },
-    { Inventor: 'Hiroshi Tanaka', Invention: 'Floating Energy Generator', Year: 2045, Country: 'Japan' },
-    { Inventor: 'Elena Rodriguez', Invention: 'Anti-Gravity Shoes', Year: 2038, Country: 'Spain' },
-    { Inventor: 'Mohammed Al-Farsi', Invention: 'Bio-Enhancement Nanobots', Year: 2042, Country: 'Saudi Arabia' },
-    { Inventor: 'Sophie Dubois', Invention: 'Smart Plant Growth System', Year: 2048, Country: 'France' },
-    { Inventor: 'Raj Kapoor', Invention: 'Solar-Powered Air Purifier', Year: 2035, Country: 'India' },
-    { Inventor: 'Isabella Chang', Invention: 'Mind-Reading Headset', Year: 2046, Country: 'China' },
-    { Inventor: 'Antonio Morales', Invention: 'Ocean Cleanup Drones', Year: 2039, Country: 'Mexico' },
-    { Inventor: 'Oliver Smith', Invention: 'Holographic Communication Device', Year: 2044, Country: 'United Kingdom' },
-    { Inventor: 'Emma Williams', Invention: 'Invisible Cloak', Year: 2047, Country: 'Canada' },
-    { Inventor: 'Liam Chen', Invention: 'Mind-Controlled Robotics', Year: 2043, Country: 'Australia' },
-    { Inventor: 'Ava Kim', Invention: 'Biodegradable Plastics', Year: 2037, Country: 'South Korea' },
-    { Inventor: 'Noah Gupta', Invention: 'AI-Powered Personal Assistant', Year: 2041, Country: 'Germany' },
-    { Inventor: 'Olivia Rodriguez', Invention: 'Augmented Reality Glasses', Year: 2049, Country: 'Brazil' },
-    { Inventor: 'Mia Patel', Invention: 'Self-Healing Materials', Year: 2036, Country: 'Netherlands' },
-    { Inventor: 'Lucas Chang', Invention: 'Flying Car', Year: 2040, Country: 'Singapore' },
-    { Inventor: 'Sophia Kim', Invention: 'Teleportation Device', Year: 2042, Country: 'New Zealand' },
-    { Inventor: 'Jackson Nguyen', Invention: 'Robotics for Elderly Care', Year: 2039, Country: 'Sweden' },
-    { Inventor: 'Liam Johnson', Invention: 'Bio-Printed Organs', Year: 2042, Country: 'United States' },
-    { Inventor: 'Olivia Tanaka', Invention: 'Self-Driving Hoverboard', Year: 2048, Country: 'Japan' },
-    { Inventor: 'Noah Rodriguez', Invention: 'Personalized Medicine Delivery Drones', Year: 2040, Country: 'Spain' },
-    { Inventor: 'Emma Al-Farsi', Invention: 'AI-Powered Sustainable Farming System', Year: 2045, Country: 'Saudi Arabia' },
-    { Inventor: 'Aiden Dubois', Invention: 'Smart Clothing with Health Monitoring', Year: 2037, Country: 'France' },
-    { Inventor: 'Grace Kapoor', Invention: 'Clean Energy Harvesting Pavements', Year: 2043, Country: 'India' },
-    { Inventor: 'Henry Chang', Invention: 'Neural Implant for Memory Enhancement', Year: 2039, Country: 'China' },
-    { Inventor: 'Chloe Morales', Invention: 'Underwater Exploration Bots', Year: 2046, Country: 'Mexico' },
-    { Inventor: 'William Smith', Invention: 'Quantum Computing Processor', Year: 2041, Country: 'United Kingdom' },
-    { Inventor: 'Elijah Patel', Invention: 'Smart Home Ecosystem', Year: 2036, Country: 'Canada' },
-    { Inventor: 'Amelia Kim', Invention: 'Solar-Powered Desalination System', Year: 2044, Country: 'Australia' },
-    { Inventor: 'Mason Nguyen', Invention: 'AI-Enhanced Virtual Reality', Year: 2047, Country: 'South Korea' },
-    { Inventor: 'Sophia Wang', Invention: 'Bionic Limbs with Touch Sensation', Year: 2038, Country: 'Germany' },
-    { Inventor: 'Logan Garcia', Invention: 'Space Debris Cleanup Satellites', Year: 2049, Country: 'Brazil' },
-    { Inventor: 'Evelyn Kim', Invention: 'Genetic Modification for Disease Resistance', Year: 2041, Country: 'Netherlands' },
-    { Inventor: 'Jackson Lee', Invention: 'Mind-Uploaded Digital Immortality', Year: 2045, Country: 'Singapore' },
-    { Inventor: 'Ava Hernandez', Invention: '3D-Printed Sustainable Homes', Year: 2040, Country: 'New Zealand' },
-    { Inventor: 'Ethan Carter', Invention: 'Human-AI Collaboration for Creativity', Year: 2042, Country: 'Sweden' },
-  ];
-  
-  
+  // Q no 5: Count how many times each item type (e.g., 'Laptop', 'Smartphone') was sold
+  let soldItems = salesData.reduce((total, next) => {
+    total[next.Item] = (total[next.Item] || 0) + 1
+    return total
+  },{})
+  // console.log(soldItems);
 
-  // Third Practice on Company
+  // Q no 6: How many total sales were made in the 'West' region?
+  let westSales = salesData
+  .filter((westRegion)=> westRegion.Region === 'West') 
+  .reduce((total, next) => total + next.Sale_amt, 0)
+  // console.log(westSales);
 
-  const companyData = [
-    { CompanyName: 'Tech Innovators Inc.', Industry: 'Technology', FoundingYear: 2000, Headquarters: { City: 'San Francisco', Country: 'USA' } },
-    { CompanyName: 'Eco Solutions Co.', Industry: 'Environmental', FoundingYear: 2005, Headquarters: { City: 'Berlin', Country: 'Germany' } },
-    { CompanyName: 'Global Robotics Corporation', Industry: 'Robotics', FoundingYear: 2010, Headquarters: { City: 'Tokyo', Country: 'Japan' } },
-    { CompanyName: 'HealthTech Solutions Ltd.', Industry: 'Healthcare', FoundingYear: 2008, Headquarters: { City: 'Sydney', Country: 'Australia' } },
-    { CompanyName: 'Renewable Energy Innovations', Industry: 'Renewable Energy', FoundingYear: 2015, Headquarters: { City: 'Paris', Country: 'France' } },
-    { CompanyName: 'Smart Devices Enterprises', Industry: 'Electronics', FoundingYear: 2003, Headquarters: { City: 'Bangalore', Country: 'India' } },
-    { CompanyName: 'Biotech Breakthroughs LLC', Industry: 'Biotechnology', FoundingYear: 2012, Headquarters: { City: 'Toronto', Country: 'Canada' } },
-    { CompanyName: 'Data Analytics Systems, LLC', Industry: 'Data Analytics', FoundingYear: 2011, Headquarters: { City: 'Seoul', Country: 'South Korea' } },
-    { CompanyName: 'GreenTech Solutions', Industry: 'Green Technology', FoundingYear: 2018, Headquarters: { City: 'Stockholm', Country: 'Sweden' } },
-    { CompanyName: 'InnoTech Solutions', Industry: 'Technology', FoundingYear: 2002, Headquarters: { City: 'New York', Country: 'USA' } },
-    { CompanyName: 'GreenEnergy Innovations', Industry: 'Renewable Energy', FoundingYear: 2013, Headquarters: { City: 'Vancouver', Country: 'Canada' } },
-    { CompanyName: 'BioTech Systems Ltd.', Industry: 'Biotechnology', FoundingYear: 2007, Headquarters: { City: 'Berlin', Country: 'Germany' } },
-    { CompanyName: 'Future Dynamics Corp.', Industry: 'Robotics', FoundingYear: 2016, Headquarters: { City: 'Shanghai', Country: 'China' } },
-    { CompanyName: 'HealthSolutions International', Industry: 'Healthcare', FoundingYear: 2009, Headquarters: { City: 'Sydney', Country: 'Australia' } },
-    { CompanyName: 'DataVision Innovations', Industry: 'Data Analytics', FoundingYear: 2014, Headquarters: { City: 'Toronto', Country: 'Canada' } },
-    { CompanyName: 'GreenBuild Tech', Industry: 'Green Technology', FoundingYear: 2010, Headquarters: { City: 'Stockholm', Country: 'Sweden' } },
-    { CompanyName: 'ElectroInnovate', Industry: 'Electronics', FoundingYear: 2006, Headquarters: { City: 'Tokyo', Country: 'Japan' } },
-    { CompanyName: 'SmartLiving Solutions', Industry: 'Smart Home', FoundingYear: 2015, Headquarters: { City: 'Los Angeles', Country: 'USA' } },
-    { CompanyName: 'SmartTech Innovations', Industry: 'Technology', FoundingYear: 2001, Headquarters: { City: 'San Jose', Country: 'USA' } },
-    { CompanyName: 'EnviroSolutions Global', Industry: 'Environmental', FoundingYear: 2011, Headquarters: { City: 'London', Country: 'United Kingdom' } },
-    { CompanyName: 'RoboTech Dynamics', Industry: 'Robotics', FoundingYear: 2008, Headquarters: { City: 'Seoul', Country: 'South Korea' } },
-    { CompanyName: 'MedTech Solutions Inc.', Industry: 'Healthcare', FoundingYear: 2013, Headquarters: { City: 'Melbourne', Country: 'Australia' } },
-    { CompanyName: 'SolarPower Innovations', Industry: 'Renewable Energy', FoundingYear: 2016, Headquarters: { City: 'Rio de Janeiro', Country: 'Brazil' } },
-    { CompanyName: 'DataDriven Insights', Industry: 'Data Analytics', FoundingYear: 2010, Headquarters: { City: 'Mumbai', Country: 'India' } },
-    { CompanyName: 'EcoBuild Technologies', Industry: 'Green Technology', FoundingYear: 2012, Headquarters: { City: 'Oslo', Country: 'Norway' } },
-    { CompanyName: 'ElectroGadgets Ltd.', Industry: 'Electronics', FoundingYear: 2007, Headquarters: { City: 'Paris', Country: 'France' } },
-    { CompanyName: 'HomeSmart Innovate', Industry: 'Smart Home', FoundingYear: 2015, Headquarters: { City: 'Berlin', Country: 'Germany' } },
-    { CompanyName: 'InnovateTech Solutions', Industry: 'Technology', FoundingYear: 2005, Headquarters: { City: 'Boston', Country: 'USA' } },
-    { CompanyName: 'EcoFriendly Innovations', Industry: 'Environmental', FoundingYear: 2014, Headquarters: { City: 'Sydney', Country: 'Australia' } },
-    { CompanyName: 'RoboInnovate Dynamics', Industry: 'Robotics', FoundingYear: 2009, Headquarters: { City: 'Beijing', Country: 'China' } },
-    { CompanyName: 'MediCare Solutions Inc.', Industry: 'Healthcare', FoundingYear: 2012, Headquarters: { City: 'Tokyo', Country: 'Japan' } },
-    { CompanyName: 'SolarEco Innovations', Industry: 'Renewable Energy', FoundingYear: 2018, Headquarters: { City: 'Berlin', Country: 'Germany' } },
-    { CompanyName: 'DataInsights Hub', Industry: 'Data Analytics', FoundingYear: 2011, Headquarters: { City: 'San Francisco', Country: 'USA' } },
-    { CompanyName: 'EcoSustainable Tech', Industry: 'Green Technology', FoundingYear: 2013, Headquarters: { City: 'London', Country: 'United Kingdom' } },
-    { CompanyName: 'ElectroTech Ltd.', Industry: 'Electronics', FoundingYear: 2006, Headquarters: { City: 'Seoul', Country: 'South Korea' } },
-    { CompanyName: 'SmartLiving Solutions', Industry: 'Smart Home', FoundingYear: 2016, Headquarters: { City: 'Mumbai', Country: 'India' } }
-  ];
-  
+  // Q no 7: How many sales in the 'East' region were for orders exceeding $15,000?
+  let eastSales = salesData
+  .filter((east) => east.Region === "East" && east.Sale_amt > 15000)
+  .reduce((total, nest)=> total + nest.Sale_amt, 0)
+  // console.log(eastSales);
+
+  // Q no 8: Out of all regions, which region had the highest number of sales?
+  let totalRegion = salesData.reduce((total, next) => {
+    total[next.Region] = (total[next.Region] || 0) + 1
+    return total
+  },{})  
+  console.log(totalRegion);
